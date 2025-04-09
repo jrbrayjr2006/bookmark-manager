@@ -12,7 +12,15 @@
     --color-veryDarkBlue: hsl(229, 31%, 21%);
 
     --font-sans: 'Rubik', sans-serif;
+
+    --background-image-dots: url("./images/bg-dots.svg");
 }
+
+/* @layer base {
+    @variant dark {
+      --color-pink: #8e0d7a;
+    }
+} */
 
 @media (min-width: 1020px) {
     .bg-hero {
