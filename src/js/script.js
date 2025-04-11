@@ -1,5 +1,8 @@
 const tabs = document.querySelectorAll('.tab');
 const panels = document.querySelectorAll('.panel');
+const btn = document.getElementById('menu-btn');
+const menu = document.getElementById('menu');
+const logo = document.getElementById('logo');
 // console.log(tabs);
 // console.log(panels);
 
@@ -31,6 +34,21 @@ function onTabClick(event) {
     // Alternatiuvely, you can use the following code to add the active class to the clicked tab
     // document.getElementById('panels').getElementsByClassName(classString)[0].classList.remove('hidden');
 }
+
+function navToggle() {
+    btn.classList.toggle('open');
+    menu.classList.toggle('flex');
+    menu.classList.toggle('hidden');
+
+    if (menu.classList.contains('flex')) {
+        logo.setAttribute('src', './images/logo-bookmark-footer.svg');
+    } else {
+        logo.setAttribute('src', './images/logo-bookmark.svg');
+    }
+}
+
+// Hamburger button listener
+btn.addEventListener('click', navToggle);
 
 // Tabs menu event listener
 tabs.forEach((tab) => {
